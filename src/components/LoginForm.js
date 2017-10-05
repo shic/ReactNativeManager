@@ -15,7 +15,7 @@ import * as actions from '../actions'
 
 class LoginForm extends Component{
     onEmailChange(text){
-        this.props.emailChanged(text);
+        this.props.emailChanged(text);  
     }
 
     render(){
@@ -33,7 +33,7 @@ class LoginForm extends Component{
                     <Input
                         label='Password'
                         secureTextEntry
-                        placeHolder='password'
+                        placeholder='password'
                     />
                 </CardSection>
                 <CardSection>
