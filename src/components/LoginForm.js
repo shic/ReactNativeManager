@@ -13,9 +13,9 @@ import {
 
 import * as actions from '../actions'
 
-class LoginForm extends Component(){
+class LoginForm extends Component{
     onEmailChange(text){
-        actions.emailChanged(text);
+        this.props.emailChanged(text);
     }
 
     render(){
