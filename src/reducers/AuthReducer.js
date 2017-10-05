@@ -1,7 +1,8 @@
-import {EMAIL_CHANGED} from "../actions/types"
+import {EMAIL_CHANGED,PASSWORD_CHANGED} from "../actions/types"
 
 const INITIAL_STATE = {
-    email:''
+    email:'',
+    password:''
 };
 
 export default (state=INITIAL_STATE,action)=>{
@@ -10,6 +11,11 @@ export default (state=INITIAL_STATE,action)=>{
             console.log(`${action.type} action is called.`);
 
             return {...state,email:action.payload};
+            break;
+        case PASSWORD_CHANGED:
+            console.log(`${action.type} action is called.`);
+
+            return {...state,password:action.payload};
             break;
         default:
             return state;
