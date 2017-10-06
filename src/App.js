@@ -14,8 +14,8 @@ import firebase from 'firebase'
 import LoginForm from './components/LoginForm'
 import Router from './Router'
 
-class App extends Component{
-    componentWillMount(){
+class App extends Component {
+    componentWillMount() {
         // Initialize Firebase
         const config = {
             apiKey: "AIzaSyCCSkqhyJ7bpq0eZyC4LFjZDl_5CBjUqIU",
@@ -28,13 +28,12 @@ class App extends Component{
         firebase.initializeApp(config);
 
     };
-    render(){
-        const store = createStore(reducers,{},applyMiddleware(ReduxThunk));
-        return(
+
+    render() {
+        const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
+        return (
             <Provider store={store}>
-                <View>
-                    <Router/>
-                </View>
+                <Router/>
             </Provider>
         )
     }
