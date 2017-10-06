@@ -15,7 +15,8 @@ import {
 
 import {
     emailChanged,
-    passwordChanged
+    passwordChanged,
+    loginUser
 } from '../actions'
 
 class LoginForm extends Component{
